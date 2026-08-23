@@ -64,14 +64,16 @@ function nodo(html) {
 	return plantilla.content.firstElementChild;
 }
 
-function marca(valor) {
-	if (valor) return `<span class="marca">✓</span>`;
-	return `<span class="marca--vacia" aria-label="Sin registro">—</span>`;
+function marca(valor, etiqueta) {
+	if (valor) return `<td data-label="${etiqueta}"><span class="marca">✓</span></td>`;
+	return `<td data-label="${etiqueta}"><span class="marca--vacia" aria-label="Sin registro">—</span></td>`;
 }
 
-function celdaNum(valor, destacada = false) {
+function celdaNum(valor, etiqueta, destacada = false) {
 	const clase = destacada ? "num destacada" : "num";
-	return valor == null ? `<td class="${clase}">—</td>` : `<td class="${clase}">${valor}</td>`;
+	return valor == null
+		? `<td class="${clase}" data-label="${etiqueta}">—</td>`
+		: `<td class="${clase}" data-label="${etiqueta}">${valor}</td>`;
 }
 
 function seccionNivel(numero, expediente, clave, anio, contenidoHtml) {
@@ -96,9 +98,9 @@ function tablaIndicadores(caption, indicadores) {
 			(fila) => `
 			<tr>
 				<th scope="row">${fila.indicador}</th>
-				<td>${marca(fila.inicio_ano_escolar)}</td>
-				<td>${marca(fila.primer_periodo)}</td>
-				<td>${marca(fila.segundo_periodo)}</td>
+				${marca(fila.inicio_ano_escolar, "Inicio")}
+				${marca(fila.primer_periodo, "Primer período")}
+				${marca(fila.segundo_periodo, "Segundo período")}
 			</tr>`
 		)
 		.join("");
@@ -147,7 +149,7 @@ function tablaTrimestre(nombre, asignaturas) {
 	const filas = Object.entries(asignaturas)
 		.map(([nombreAsignatura, datos]) => {
 			const celdas = columnas
-				.map(([clave], i) => celdaNum(datos[clave], i === columnas.length - 1))
+				.map(([clave, titulo], i) => celdaNum(datos[clave], titulo, i === columnas.length - 1))
 				.join("");
 			return `<tr><th scope="row">${tituloClave(nombreAsignatura)}</th>${celdas}</tr>`;
 		})
@@ -187,7 +189,9 @@ function renderPrimaria(expediente) {
 		const nombresTrim = Object.keys(notas.indice);
 		const filas = metricas
 			.map((metrica) => {
-				const celdas = nombresTrim.map((t) => celdaNum(notas.indice[t][metrica])).join("");
+				const celdas = nombresTrim
+					.map((t) => celdaNum(notas.indice[t][metrica], tituloClave(t)))
+					.join("");
 				return `<tr><th scope="row">${METRICAS_TRIMESTRE.find(([c]) => c === metrica)?.[1] ?? tituloClave(metrica)}</th>${celdas}</tr>`;
 			})
 			.join("");
@@ -231,7 +235,9 @@ function renderSecundaria(expediente) {
 
 	const filasParciales = Object.entries(parciales)
 		.map(([asignatura, notas]) => {
-			const celdas = periodos.map((p) => celdaNum(notas[p])).join("");
+			const celdas = periodos
+				.map((p) => celdaNum(notas[p], MESES[p] ?? tituloClave(p)))
+				.join("");
 			return `<tr><th scope="row">${tituloClave(asignatura)}</th>${celdas}</tr>`;
 		})
 		.join("");
@@ -239,7 +245,7 @@ function renderSecundaria(expediente) {
 	const filasFinales = Object.entries(finales)
 		.map(([asignatura, nota], i, arr) => {
 			const ultima = i === arr.length - 1;
-			return `<tr><th scope="row">${tituloClave(asignatura)}</th>${celdaNum(nota, ultima)}</tr>`;
+			return `<tr><th scope="row">${tituloClave(asignatura)}</th>${celdaNum(nota, "Calificación final", ultima)}</tr>`;
 		})
 		.join("");
 
@@ -248,7 +254,7 @@ function renderSecundaria(expediente) {
 			.map(([periodo, nota], i, arr) => {
 				const esFinal = i === arr.length - 1;
 				const nombre = esFinal ? "Calificación final" : (MESES[periodo] ?? tituloClave(periodo));
-				return `<tr><th scope="row">${nombre}</th>${celdaNum(nota, esFinal)}</tr>`;
+				return `<tr><th scope="row">${nombre}</th>${celdaNum(nota, "Índice", esFinal)}</tr>`;
 			})
 			.join("");
 
