@@ -1,18 +1,18 @@
-/* Hallmark · genre: editorial · macrostructure: Long Document · theme: Almanac · enrichment: none (typography only) · nav: N6 masthead · footer: Ft1 colophon
+/* Hallmark · genre: editorial · macrostructure: Long Document · theme: Garden · enrichment: none (typography only) · nav: N6 masthead + pestañas · footer: Ft1 colophon
  * audience: público general consultando un expediente · use: leer calificaciones por nivel · tone: editorial académico */
 
 :root {
-	--color-paper:   oklch(96.5% 0.013 75);
-	--color-paper-2: oklch(93% 0.015 75);
-	--color-rule:    oklch(82% 0.012 70);
-	--color-neutral: oklch(56% 0.01 65);
-	--color-muted:   oklch(40% 0.01 60);
-	--color-ink:     oklch(20% 0.014 55);
-	--color-accent:  oklch(44% 0.13 28);
-	--color-focus:   oklch(50% 0.16 28);
+	--color-paper:   oklch(97% 0.012 145);
+	--color-paper-2: oklch(93.5% 0.017 145);
+	--color-rule:    oklch(84% 0.022 148);
+	--color-neutral: oklch(54% 0.016 152);
+	--color-muted:   oklch(39% 0.019 152);
+	--color-ink:     oklch(21% 0.021 155);
+	--color-accent:  oklch(44% 0.125 150);
+	--color-focus:   oklch(50% 0.15 150);
 
 	--font-display: "Fraunces", ui-serif, Georgia, serif;
-	--font-body:    "Newsreader", ui-serif, Georgia, serif;
+	--font-body:    "EB Garamond", ui-serif, Georgia, serif;
 
 	--text-xs: 0.64rem;
 	--text-sm: 0.8rem;
@@ -126,6 +126,45 @@ code {
 	color: var(--color-neutral);
 	font-variant-caps: all-small-caps;
 	letter-spacing: 0.08em;
+}
+
+/* --- pestañas de niveles -------------------------------------------------- */
+
+.pestanas {
+	max-width: var(--measure);
+	margin-inline: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0 var(--space-md);
+	border-bottom: 1px solid var(--color-rule);
+}
+
+.pestanas a {
+	font-size: var(--text-sm);
+	font-variant-caps: all-small-caps;
+	letter-spacing: 0.1em;
+	color: var(--color-muted);
+	text-decoration: none;
+	padding-block: var(--space-sm) var(--space-xs);
+	border-bottom: 2px solid transparent;
+	white-space: nowrap;
+	transition: color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out);
+}
+
+.pestanas a:hover {
+	color: var(--color-ink);
+}
+
+.pestanas a:focus-visible {
+	outline: 2px solid var(--color-focus);
+	outline-offset: -2px;
+	border-radius: 1px;
+}
+
+.pestanas a[aria-current="true"] {
+	color: var(--color-accent);
+	border-color: var(--color-accent);
 }
 
 /* --- documento ----------------------------------------------------------- */
