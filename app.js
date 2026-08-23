@@ -23,7 +23,6 @@ function renderEncabezado(expediente) {
 		expediente.primaria["año_escolar"],
 		expediente.secundaria["año_escolar"],
 	];
-	$("#periodo-total").textContent = `${anios[0]} — ${anios[2]}`;
 
 	const niveles = [
 		textoNivel(expediente.pre_primaria.curso),
@@ -105,19 +104,21 @@ function tablaIndicadores(caption, indicadores) {
 		.join("");
 
 	return `
-		<div class="tabla-scroll">
-			<table>
-				<caption>${caption}</caption>
-				<thead>
-					<tr>
-						<th scope="col">Indicador</th>
-						<th scope="col">Inicio del año escolar</th>
-						<th scope="col">Primer período</th>
-						<th scope="col">Segundo período</th>
-					</tr>
-				</thead>
-				<tbody>${filas}</tbody>
-			</table>
+		<div class="tarjeta">
+			<div class="tabla-scroll">
+				<table>
+					<caption>${caption}</caption>
+					<thead>
+						<tr>
+							<th scope="col">Indicador</th>
+							<th scope="col">Inicio del año escolar</th>
+							<th scope="col">Primer período</th>
+							<th scope="col">Segundo período</th>
+						</tr>
+					</thead>
+					<tbody>${filas}</tbody>
+				</table>
+			</div>
 		</div>`;
 }
 
@@ -153,17 +154,19 @@ function tablaTrimestre(nombre, asignaturas) {
 		.join("");
 
 	return `
-		<div class="tabla-scroll">
-			<table>
-				<caption>${nombre}</caption>
-				<thead>
-					<tr>
-						<th scope="col">Asignatura</th>
-						${cabecera}
-					</tr>
-				</thead>
-				<tbody>${filas}</tbody>
-			</table>
+		<div class="tarjeta">
+			<div class="tabla-scroll">
+				<table>
+					<caption>${nombre}</caption>
+					<thead>
+						<tr>
+							<th scope="col">Asignatura</th>
+							${cabecera}
+						</tr>
+					</thead>
+					<tbody>${filas}</tbody>
+				</table>
+			</div>
 		</div>`;
 }
 
@@ -190,16 +193,18 @@ function renderPrimaria(expediente) {
 			.join("");
 		indiceHtml = `
 			<h3>Índice general</h3>
-			<div class="tabla-scroll">
-				<table>
-					<thead>
-						<tr>
-							<th scope="col"></th>
-							${nombresTrim.map((t) => `<th scope="col" class="num">${tituloClave(t)}</th>`).join("")}
-						</tr>
-					</thead>
-					<tbody>${filas}</tbody>
-				</table>
+			<div class="tarjeta">
+				<div class="tabla-scroll">
+					<table>
+						<thead>
+							<tr>
+								<th scope="col"></th>
+								${nombresTrim.map((t) => `<th scope="col" class="num">${tituloClave(t)}</th>`).join("")}
+							</tr>
+						</thead>
+						<tbody>${filas}</tbody>
+					</table>
+				</div>
 			</div>`;
 	}
 
@@ -208,7 +213,7 @@ function renderPrimaria(expediente) {
 		const items = Object.entries(notas.leyenda)
 			.map(([sigla, significado]) => `<strong>${sigla.toUpperCase()}</strong> — ${significado}`)
 			.join(" · ");
-		leyendaHtml = `<p class="leyenda">${items}</p>`;
+		leyendaHtml = `<div class="tarjeta"><p class="leyenda">${items}</p></div>`;
 	}
 
 	return seccionNivel("2", expediente, "primaria", primaria["año_escolar"], trimestres + indiceHtml + leyendaHtml);
@@ -249,33 +254,71 @@ function renderSecundaria(expediente) {
 
 	const contenido = `
 		<h3>Calificaciones parciales</h3>
-		<div class="tabla-scroll">
-			<table>
-				<thead>
-					<tr>
-						<th scope="col">Asignatura</th>
-						${periodos.map((p) => `<th scope="col" class="num">${MESES[p] ?? tituloClave(p)}</th>`).join("")}
-					</tr>
-				</thead>
-				<tbody>${filasParciales}</tbody>
-			</table>
+		<div class="tarjeta">
+			<div class="tabla-scroll">
+				<table>
+					<thead>
+						<tr>
+							<th scope="col">Asignatura</th>
+							${periodos.map((p) => `<th scope="col" class="num">${MESES[p] ?? tituloClave(p)}</th>`).join("")}
+						</tr>
+					</thead>
+					<tbody>${filasParciales}</tbody>
+				</table>
+			</div>
 		</div>
 
 		<h3>Calificación final por asignatura</h3>
-		<div class="tabla-scroll">
-			<table>
-				<tbody>${filasFinales}</tbody>
-			</table>
+		<div class="tarjeta">
+			<div class="tabla-scroll">
+				<table>
+					<tbody>${filasFinales}</tbody>
+				</table>
+			</div>
 		</div>
 
 		<h3>Índice académico</h3>
-		<div class="tabla-scroll">
-			<table>
-				<tbody>${filaFinalIndice}</tbody>
-			</table>
+		<div class="tarjeta">
+			<div class="tabla-scroll">
+				<table>
+					<tbody>${filaFinalIndice}</tbody>
+				</table>
+			</div>
 		</div>`;
 
 	return seccionNivel("3", expediente, "secundaria", secundaria["año_escolar"], contenido);
+}
+
+/* --- stats ---------------------------------------------------------------- */
+
+function renderStats(expediente) {
+	const indiceFinal = expediente.secundaria.indice?.final;
+	const finales = Object.values(expediente.secundaria.calificacion_final ?? {});
+	const promedio = finales.length
+		? Math.round((finales.reduce((suma, nota) => suma + nota, 0) / finales.length) * 10) / 10
+		: null;
+	const anios = [
+		expediente.pre_primaria["año_escolar"],
+		expediente.primaria["año_escolar"],
+		expediente.secundaria["año_escolar"],
+	];
+
+	const stats = [
+		[indiceFinal, "Índice académico final (6to. de secundaria)"],
+		[promedio, "Promedio de calificaciones finales"],
+		[`${anios[0]} — ${anios[2]}`, "Período cubierto por el expediente"],
+	].filter(([valor]) => valor != null);
+
+	const contenedor = $("#stats");
+	for (const [valor, etiqueta] of stats) {
+		contenedor.append(nodo(`
+			<div class="stat">
+				<span class="stat__valor">${valor}</span>
+				<span class="stat__etiqueta">${etiqueta}</span>
+			</div>
+		`));
+	}
+	contenedor.hidden = false;
 }
 
 /* --- montaje ------------------------------------------------------------- */
@@ -337,6 +380,7 @@ async function iniciar() {
 	try {
 		const datos = await cargarDatos();
 		renderEncabezado(datos[0]);
+		renderStats(datos[0]);
 		renderSecciones(datos[0]);
 	} catch (error) {
 		const aviso = $("#error");

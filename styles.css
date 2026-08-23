@@ -1,18 +1,20 @@
-/* Hallmark · genre: editorial · macrostructure: Long Document · theme: Garden · enrichment: none (typography only) · nav: N6 masthead + pestañas · footer: Ft1 colophon
- * audience: público general consultando un expediente · use: leer calificaciones por nivel · tone: editorial académico */
+/* Hallmark · genre: modern-minimal · macrostructure: Stat-Led + pestañas (ADN together.ai) · theme: Cobalt-adjacent (papel frío · tinta navy · acento naranja señal) · enrichment: none · nav: N1b topbar · footer: Ft2 inline
+ * audience: público general consultando un expediente · use: leer calificaciones por nivel · tone: SaaS limpio
+ * ADN estudiado de together.ai: hero grande → fila de 3 stats → sección con pestañas → tarjetas redondeadas */
 
 :root {
-	--color-paper:   oklch(97% 0.012 145);
-	--color-paper-2: oklch(93.5% 0.017 145);
-	--color-rule:    oklch(84% 0.022 148);
-	--color-neutral: oklch(54% 0.016 152);
-	--color-muted:   oklch(39% 0.019 152);
-	--color-ink:     oklch(21% 0.021 155);
-	--color-accent:  oklch(44% 0.125 150);
-	--color-focus:   oklch(50% 0.15 150);
+	--color-paper:   oklch(98% 0.004 230);
+	--color-paper-2: oklch(96% 0.007 230);
+	--color-rule:    oklch(90% 0.01 230);
+	--color-neutral: oklch(50% 0.018 232);
+	--color-muted:   oklch(42% 0.022 232);
+	--color-ink:     oklch(26% 0.028 235);
+	--color-accent:  #FC4C02;
+	--color-focus:   oklch(55% 0.19 45);
 
-	--font-display: "Fraunces", ui-serif, Georgia, serif;
-	--font-body:    "EB Garamond", ui-serif, Georgia, serif;
+	--font-display: "Geist", ui-sans-serif, system-ui, sans-serif;
+	--font-body:    "Geist", ui-sans-serif, system-ui, sans-serif;
+	--font-outlier: "Geist Mono", ui-monospace, monospace;
 
 	--text-xs: 0.64rem;
 	--text-sm: 0.8rem;
@@ -20,17 +22,20 @@
 	--text-md: 1.25rem;
 	--text-lg: 1.5625rem;
 	--text-xl: 1.9531rem;
-	--text-2xl: 2.4414rem;
-	--text-3xl: clamp(2.25rem, 4vw + 1rem, 3.0518rem);
+	--text-display: clamp(2.5rem, 4.5vw + 1rem, 4.25rem);
 
-	--measure: 68ch;
+	--measure: 68rem;
 	--space-2xs: 0.25rem;
 	--space-xs: 0.5rem;
 	--space-sm: 1rem;
 	--space-md: 1.5rem;
 	--space-lg: 2.5rem;
 	--space-xl: 4rem;
-	--space-3xl: 6.5rem;
+	--space-3xl: 6rem;
+
+	--radio: 14px;
+	--radio-sm: 8px;
+	--borde: 1px solid var(--color-rule);
 
 	--dur-micro: 120ms;
 	--dur-short: 220ms;
@@ -55,7 +60,7 @@ body {
 	color: var(--color-ink);
 	font-family: var(--font-body);
 	font-size: var(--text-base);
-	line-height: 1.65;
+	line-height: 1.6;
 	font-variant-numeric: oldstyle-nums;
 	padding-inline: max(1rem, env(safe-area-inset-left));
 }
@@ -66,69 +71,133 @@ h3 {
 	font-family: var(--font-display);
 	font-style: normal;
 	font-weight: 600;
-	line-height: 1.15;
-	letter-spacing: -0.02em;
+	line-height: 1.12;
+	letter-spacing: -0.025em;
 	overflow-wrap: anywhere;
 	min-width: 0;
 }
 
 a {
-	color: var(--color-accent);
-	text-decoration-thickness: 1px;
-	text-underline-offset: 3px;
+	color: var(--color-ink);
+	text-decoration: none;
 }
 
 a:focus-visible {
 	outline: 2px solid var(--color-focus);
 	outline-offset: 3px;
-	border-radius: 1px;
+	border-radius: 4px;
 }
 
 code {
-	font-size: 0.9em;
+	font-family: var(--font-outlier);
+	font-size: 0.85em;
 	background: var(--color-paper-2);
-	padding: 0.1em 0.35em;
-	border-radius: 2px;
+	padding: 0.15em 0.4em;
+	border-radius: 4px;
+	border: var(--borde);
 }
 
-/* --- masthead (N6) ------------------------------------------------------ */
+/* --- barra superior (N1b) ------------------------------------------------ */
 
-.masthead {
+.topbar {
 	max-width: var(--measure);
 	margin-inline: auto;
-	padding-block: clamp(2.5rem, 6vw, 4.5rem) var(--space-md);
-	text-align: center;
-	border-bottom: 3px double var(--color-rule);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space-sm);
+	padding-block: var(--space-md);
+	border-bottom: var(--borde);
 }
 
-.masthead__kicker {
-	font-size: var(--text-sm);
-	text-transform: uppercase;
-	font-variant-caps: all-small-caps;
-	letter-spacing: 0.14em;
+.topbar__marca {
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	font-size: var(--text-md);
+}
+
+.topbar__punto {
+	color: var(--color-accent);
+}
+
+.topbar__matricula {
+	font-family: var(--font-outlier);
+	font-size: var(--text-xs);
+	letter-spacing: 0.04em;
 	color: var(--color-muted);
+	background: var(--color-paper-2);
+	border: var(--borde);
+	border-radius: 999px;
+	padding: 0.3em 0.9em;
+	white-space: nowrap;
+}
+
+/* --- hero ----------------------------------------------------------------- */
+
+.hero {
+	max-width: var(--measure);
+	margin-inline: auto;
+	padding-block: var(--space-xl) var(--space-lg);
+	text-align: center;
+}
+
+.hero__kicker {
+	font-family: var(--font-outlier);
+	font-size: var(--text-xs);
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: var(--color-accent);
 	margin: 0 0 var(--space-sm);
 }
 
-.masthead__title {
-	font-weight: 300;
-	font-size: var(--text-3xl);
+.hero__titulo {
+	font-size: var(--text-display);
+	font-weight: 600;
 	margin: 0 auto var(--space-sm);
 	text-wrap: balance;
 }
 
-.masthead__meta {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: var(--space-xs) var(--space-sm);
-	font-size: var(--text-sm);
+.hero__lede {
+	max-width: 52ch;
+	margin: 0 auto;
+	font-size: var(--text-md);
 	color: var(--color-neutral);
-	font-variant-caps: all-small-caps;
-	letter-spacing: 0.08em;
 }
 
-/* --- pestañas de niveles -------------------------------------------------- */
+/* --- fila de stats --------------------------------------------------------- */
+
+.stats {
+	max-width: var(--measure);
+	margin-inline: auto;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--space-sm);
+	padding-block-end: var(--space-xl);
+}
+
+.stat {
+	background: var(--color-paper-2);
+	border: var(--borde);
+	border-radius: var(--radio);
+	padding: var(--space-md);
+	display: grid;
+	gap: var(--space-2xs);
+}
+
+.stat__valor {
+	font-family: var(--font-outlier);
+	font-size: var(--text-xl);
+	font-weight: 500;
+	letter-spacing: -0.02em;
+	font-variant-numeric: tabular-nums;
+}
+
+.stat__etiqueta {
+	font-size: var(--text-sm);
+	color: var(--color-neutral);
+}
+
+/* --- pestañas --------------------------------------------------------------- */
 
 .pestanas {
 	max-width: var(--measure);
@@ -136,80 +205,51 @@ code {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 0 var(--space-md);
-	border-bottom: 1px solid var(--color-rule);
+	gap: var(--space-xs);
+	padding-block-end: var(--space-lg);
 }
 
 .pestanas a {
 	font-size: var(--text-sm);
-	font-variant-caps: all-small-caps;
-	letter-spacing: 0.1em;
+	font-weight: 500;
 	color: var(--color-muted);
-	text-decoration: none;
-	padding-block: var(--space-sm) var(--space-xs);
-	border-bottom: 2px solid transparent;
+	background: var(--color-paper-2);
+	border: var(--borde);
+	border-radius: 999px;
+	padding: 0.5em 1.2em;
 	white-space: nowrap;
-	transition: color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out);
+	transition: color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out), background var(--dur-micro) var(--ease-out);
 }
 
 .pestanas a:hover {
 	color: var(--color-ink);
+	border-color: var(--color-neutral);
 }
 
 .pestanas a:focus-visible {
 	outline: 2px solid var(--color-focus);
-	outline-offset: -2px;
-	border-radius: 1px;
+	outline-offset: 2px;
 }
 
 .pestanas a[aria-current="true"] {
-	color: var(--color-accent);
-	border-color: var(--color-accent);
+	color: var(--color-paper);
+	background: var(--color-ink);
+	border-color: var(--color-ink);
 }
 
-/* --- documento ----------------------------------------------------------- */
-
-.prose {
-	max-width: var(--measure);
-	margin-inline: auto;
-	padding-block: var(--space-xl) var(--space-3xl);
-}
-
-.lede {
-	font-size: var(--text-md);
-	line-height: 1.6;
-}
-
-.lede p {
-	margin: 0;
-}
-
-.aviso {
-	color: var(--color-muted);
-	font-style: italic;
-}
-
-/* nivel (pre-primaria / primaria / secundaria) */
+/* --- secciones por nivel ----------------------------------------------------- */
 
 .nivel {
-	margin-block-start: var(--space-3xl);
+	max-width: var(--measure);
+	margin-inline: auto;
+	padding-block-end: var(--space-xl);
 }
 
 .nivel__head {
 	display: flex;
 	align-items: baseline;
 	gap: var(--space-sm);
-	border-bottom: 1px solid var(--color-rule);
-	padding-block-end: var(--space-xs);
 	margin-block-end: var(--space-md);
-}
-
-.nivel__num {
-	font-family: var(--font-display);
-	font-weight: 300;
-	font-size: var(--text-lg);
-	color: var(--color-accent);
-	font-variant-numeric: lining-nums;
 }
 
 .nivel__titulo {
@@ -219,16 +259,18 @@ code {
 
 .nivel__anio {
 	margin-inline-start: auto;
-	font-size: var(--text-sm);
+	font-family: var(--font-outlier);
+	font-size: var(--text-xs);
 	color: var(--color-neutral);
-	font-variant-caps: all-small-caps;
-	letter-spacing: 0.08em;
+	background: var(--color-paper-2);
+	border: var(--borde);
+	border-radius: 999px;
+	padding: 0.3em 0.9em;
 	white-space: nowrap;
 }
 
 .nivel h3 {
 	font-size: var(--text-md);
-	font-weight: 600;
 	margin-block: var(--space-lg) var(--space-sm);
 }
 
@@ -236,11 +278,24 @@ code {
 	margin-block: var(--space-sm);
 }
 
-/* tablas de datos */
+.tarjeta {
+	background: var(--color-paper);
+	border: var(--borde);
+	border-radius: var(--radio);
+	overflow: hidden;
+	margin-block-end: var(--space-md);
+}
+
+.aviso {
+	max-width: var(--measure);
+	margin-inline: auto;
+	color: var(--color-muted);
+}
+
+/* --- tablas ------------------------------------------------------------------ */
 
 .tabla-scroll {
 	overflow-x: auto;
-	margin-block: var(--space-md);
 }
 
 table {
@@ -254,27 +309,34 @@ caption {
 	caption-side: top;
 	text-align: start;
 	font-size: var(--text-sm);
-	font-variant-caps: all-small-caps;
-	letter-spacing: 0.08em;
+	font-weight: 500;
 	color: var(--color-muted);
-	padding-block-end: var(--space-xs);
+	padding: var(--space-sm) var(--space-md) var(--space-xs);
+}
+
+thead th {
+	font-weight: 500;
+	font-size: var(--text-xs);
+	text-transform: uppercase;
+	letter-spacing: 0.07em;
+	color: var(--color-neutral);
+	background: var(--color-paper-2);
+	border-bottom: var(--borde);
+	white-space: nowrap;
+	padding: 0.55rem 0.75rem;
 }
 
 th,
 td {
 	text-align: start;
-	padding: 0.45rem 0.6rem;
-	border-bottom: 1px solid var(--color-rule);
+	padding: 0.55rem 0.75rem;
+	border-bottom: var(--borde);
 	vertical-align: top;
 }
 
-thead th {
-	font-weight: 500;
-	font-variant-caps: all-small-caps;
-	letter-spacing: 0.06em;
-	color: var(--color-muted);
-	border-bottom: 1px solid var(--color-neutral);
-	white-space: nowrap;
+tbody tr:last-child th,
+tbody tr:last-child td {
+	border-bottom: none;
 }
 
 tbody th[scope="row"] {
@@ -295,6 +357,7 @@ tfoot th {
 
 .marca {
 	color: var(--color-accent);
+	font-weight: 600;
 }
 
 .marca--vacia {
@@ -302,15 +365,18 @@ tfoot th {
 }
 
 .destacada {
-	font-weight: 500;
-	background: linear-gradient(transparent 62%, var(--color-paper-2) 62%);
+	font-weight: 600;
+	color: var(--color-accent);
 }
 
 .leyenda {
 	font-size: var(--text-sm);
 	color: var(--color-muted);
-	border-top: 1px solid var(--color-rule);
-	padding-block-start: var(--space-sm);
+	padding: var(--space-sm) var(--space-md);
+	margin: 0;
+	border-top: var(--borde);
+	background: var(--color-paper-2);
+	border-radius: 0 0 var(--radio) var(--radio);
 }
 
 .leyenda strong {
@@ -318,22 +384,22 @@ tfoot th {
 	color: var(--color-ink);
 }
 
-/* colofón (Ft1) */
+/* --- pie (Ft2) ----------------------------------------------------------------- */
 
-.colophon {
+.pie {
 	max-width: var(--measure);
 	margin-inline: auto;
-	border-top: 3px double var(--color-rule);
-	padding-block: var(--space-md) var(--space-xl);
+	border-top: var(--borde);
+	padding-block: var(--space-lg) var(--space-xl);
 	font-size: var(--text-sm);
 	color: var(--color-neutral);
 }
 
-.colophon p {
+.pie p {
 	margin: 0;
 }
 
-/* --- movimiento ---------------------------------------------------------- */
+/* --- movimiento ------------------------------------------------------------------ */
 
 .reveal {
 	opacity: 0;
@@ -359,5 +425,25 @@ tfoot th {
 			opacity: 1;
 			transform: none;
 		}
+	}
+}
+
+/* --- responsive -------------------------------------------------------------------- */
+
+@media (max-width: 40rem) {
+	.stats {
+		grid-template-columns: 1fr;
+	}
+
+	.hero {
+		padding-block: var(--space-lg) var(--space-md);
+	}
+
+	.nivel__head {
+		flex-wrap: wrap;
+	}
+
+	.nivel__anio {
+		margin-inline-start: 0;
 	}
 }
