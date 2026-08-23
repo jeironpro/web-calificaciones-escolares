@@ -15,11 +15,11 @@ Luego visitar `http://localhost:8000`. La página carga el JSON, muestra una fil
 ## Estructura
 
 ```
-index.html            Página principal
-styles.css            Sistema de diseño (tema modern-minimal, tokens OKLCH)
-app.js                Carga del JSON y render de tablas por nivel
-favicon.svg           Ícono del sitio
-qualifications.json   Datos del expediente académico
+index.html                 Página principal
+css/styles.css             Sistema de diseño (tema modern-minimal, tokens OKLCH)
+js/app.js                  Carga del JSON y render de tablas por nivel
+icons/favicon.svg          Ícono del sitio
+data/qualifications.json   Datos del expediente académico
 ```
 
 ## Licencia
