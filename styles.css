@@ -446,4 +446,81 @@ tfoot th {
 	.nivel__anio {
 		margin-inline-start: 0;
 	}
+
+	/* tablas colapsadas a tarjetas: sin scroll */
+	.tabla-scroll {
+		overflow-x: visible;
+	}
+
+	table,
+	tbody,
+	tr,
+	th,
+	td {
+		display: block;
+		width: 100%;
+	}
+
+	thead {
+		display: none;
+	}
+
+	caption {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: var(--text-xs);
+		padding: var(--space-sm) var(--space-md) 0;
+	}
+
+	tbody tr {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.4rem 1rem;
+		padding: var(--space-xs) var(--space-md) var(--space-sm);
+		border-bottom: var(--borde);
+	}
+
+	tbody tr:last-child {
+		border-bottom: none;
+	}
+
+	tbody th[scope="row"] {
+		grid-column: 1 / -1;
+		font-weight: 500;
+		padding: 0 0 var(--space-2xs);
+		border-bottom: none;
+	}
+
+	td {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.15rem;
+		padding: 0;
+		border-bottom: none;
+	}
+
+	td::before {
+		content: attr(data-label);
+		font-size: var(--text-xs);
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: var(--color-neutral);
+		white-space: nowrap;
+	}
+
+	td.num {
+		text-align: start;
+	}
+
+	/* pestañas compactas: las tres en una fila */
+	.pestanas {
+		gap: var(--space-2xs);
+	}
+
+	.pestanas a {
+		font-size: var(--text-xs);
+		padding: 0.45em 0.9em;
+	}
 }
