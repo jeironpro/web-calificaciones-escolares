@@ -1,0 +1,1170 @@
+[
+	{
+        "institucion": "Centro Educativo El Laurel",
+        "matricula": "2010-00238",
+        "pre_primaria": {
+            "curso": "Pre primario",
+            "año_escolar": "2008-2009",
+            "dimension_socio_emocional": [
+            {
+                "indicador": "Es independiente al desarrollar sus actividades",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Muestra dependencia de sus compañeros/as al desarrollar sus actividades",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Depende de la educadora para desarrollar sus actividades",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "",
+                "segundo_periodo": ""
+            },
+            {
+                "indicador": "Muestra seguridad en lo que quiere y hace",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Se integra al grupo",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Es aceptado/a por el grupo",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Se muestra abierto/a y comunicativo/a",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Se relaciona sin dificultades con los/las demás",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Asume con regularidad las normas establecidas en el grupo",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "",
+                "segundo_periodo": ""
+            },
+            {
+                "indicador": "Reconoce las normas pero le cuesta cumplirlas",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "",
+                "segundo_periodo": ""
+            },
+            {
+                "indicador": "Se muestra respetuoso/a con los/las demás",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Se muestra tolerante con los/las demás",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Coopera de manera espontánea con el grupo y con las necesidades de éste",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Inicia una actividad y permanece hasta terminarla",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Se mantiene atento/a en el desarrollo de la actividad del tiempo esperado",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Participa en las decisiones tomadas por el grupo",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Aporta ideas en la búsqueda de soluciones a problemas reales o imaginarios",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Es capaz de tomar decisiones por sí mismo/a",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Expresa y ejecuta lo que quiere hacer",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Generalmente expresa sus opiniones sobre los objetos, las personas, las actividades y acontecimientos (Fila 1)",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Generalmente expresa sus opiniones sobre los objetos, las personas, las actividades y acontecimientos (Fila 2)",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "En sus actividades produce ideas, objetos y situaciones originales",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Tiene curiosidad por explorar y descubrir las características de los sujetos u objetos de su entorno",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Asume el cuidado e higiene personal por sí mismo/a",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Toma sus alimentos de forma independiente",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Tiene buenos modales al comer",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Tiene control de sus esfínteres",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Es ordenado/a de manera espontánea con sus pertenencias y con los materiales de trabajo",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Es capaz de ponerse algunas prendas de vestir",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Coopera cuando se le viste o desviste",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Siempre da las gracias y solicita por favor",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Siempre saluda al llegar y se despide",
+                "inicio_ano_escolar": "—",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Acepta una alimentación variada",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Identifica las distintas dependencias del centro educativo (salón patio, merendero, baño)",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Conoce y diferencia distintas dependencias de la casa y su mobiliario",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Reconoce diferentes prendas de vestir y su uso",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Conoce la profesión u oficio de sus padres",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Identifica medios de comunicación: radioa, teléfono, televisión, periodico, beeper celular",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Conoce diversos medios de transporte: avión, barco, carro guagua, motor, bicicleta, caballo",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Identifica su bandera, himno y escudo",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Reconoce elementos de su cultura: baila, música, comidas",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Participa de manera activa en conmemoraciones y celebraciones",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Distingue grande y pequeño",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Relaciona grande y pequeño",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Relaciona junto - separado",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Relaciona igual - diferente",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Establece diferencia entre objetos duros - blandos",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Hace agrupaciones por tamaños, formas, colores, uso",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Reconoce el primero y el ultimo en una serie de objetos o personas",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Utiliza antes y después para colocar objetos y relatar acontecimientos",
+                "inicio_ano_escolar": "—",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Identifica la forma triangular",
+                "inicio_ano_escolar": "—",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Identifica la forma cuadrada",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Identifica la forma circular (circular)",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Identifica la forma rectangular",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Identifica relaciones de volúmenes: lleno - vacío",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Arma rompecabezas al azar, sin seguir un criterio",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Arma rompecabezas con ayuda de sus padres o de un adulto",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Arma rompecabezas relacionando forma y color de las figuras",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Arma rompecabezas de.......piezas",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Relaciona el espacio con referencia a sí mismo/a con objetos y entre objetos",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Delante, detrás",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Arriba, abajo",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "A un lado, a otro lado",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "A medio",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Hace relaciones de todos - ninguno",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Hace relaciones de poco - mucho",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Identifica algunos números",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Utiliza una serie numérica para contar",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            }
+        ],
+        "dimension_de_la_expresion_y_comunicacion": [
+            {
+                "indicador": "Experimenta espontáneamente en el espacio con su cuerpo",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Expresa con su cuerpo situaciones, sentimientos y emociones",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Se expresa a través de títeres",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Se expresa a través del juego dramático limitado situaciones de la vida cotidiana",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Experimenta y controla distintas posibilidades del cuerpo relajación, respiración y reposo",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Se desplaza por diferentes espacios abiertos con seguridad",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Tiene seguridad al desplazarse caminando",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Tiene seguridad al correr con buena coordinación de movimientos",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Mantiene el equilibrio al caminar sobre una barra",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Hace encajados con precisión",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Manipula encajados de diferentes tamaños y formas",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Utiliza adecuadamente: lápiz, tijeras, pegamentos, pincel, pintura",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Arruga papel con fuerza",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Amasa con fuerza",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Al pegar lo hace con presión, respetando los límites",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Pica libremente",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Al colorear dentro de una figura lo hace con precisión",
+                "inicio_ano_escolar": "—",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Colorea con trazos firmes y hacia una misma dirección",
+                "inicio_ano_escolar": "—",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Ensarta libremente con precisión",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Enhebra siguiendo el contorno de una figura",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Experimenta diferentes tipos de enhebrado",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Intenta rasgado en tiras",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "",
+                "segundo_periodo": ""
+            },
+            {
+                "indicador": "Rasga papel libremente",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Expresa sus ideas - sentimientos - experiencias de forma espontánea",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Expresa sus necesidades básicas",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Se expresa de forma adecuada con oraciones interrogativas, afirmativas y negativas",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Escucha atentamente cuando otros hablan",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Comprende encargos y sigue instrucciones",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Recita rimas cortas de .... versos",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Reproduce algunos textos y juegos de tradición popular",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Disfruta las narraciones",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Participa en los diálogos sobre las narraciones",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Evoca relatos, hechos, cuentos y acontecimientos de la vida cotidiana con uso adecuado del tiempo",
+                "inicio_ano_escolar": "—",
+                "primer_periodo": "—",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Manipula diversos materiales impresos para el disfrute (libros, revistas, etc.)",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Compara entre dibujos y letras",
+                "inicio_ano_escolar": "—",
+                "primer_periodo": "—",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Interpreta imágenes de fotografías y/o dibujos que acompañen textos escritos, establece relación entre ellos",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Identifica su nombre",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Identifica el nombre de algún compañero",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Escribe espontáneamente trazos aún ilegibles con la intención de comunicar por escrito sus ideas y sentimientos",
+                "inicio_ano_escolar": "—",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Realiza trazos que expresan su nombre",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Intenta copiar su nombre",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Diferencia ruido y silencio",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Diferencia sonidos fuertes y suaves",
+                "inicio_ano_escolar": "—",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Reproduce diferentes sonidos después de escucharlos",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Aún no es capaz de reproducir sonidos",
+                "inicio_ano_escolar": "—",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Discrimina diferentes sonidos producidos por instrumentos musicales y del ambiente",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "",
+                "segundo_periodo": ""
+            },
+            {
+                "indicador": "Marca el ritmo en las canciones o poesías",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Ejecuta ritmos sencillos con su cuerpo o con instrumentos",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Mueve su cuerpo al ritmo de la música",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Disfruta las producciones de sonido con su cuerpo: palmas, pataleo, risas y llantos",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Reproduce sonidos onomatopéyicos de animales y de su medio ambiente y disfruta con ellos",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Habla con entonación adecuada",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Habla con entonación muy alta",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Tiene dificultad para pronunciar",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Entona canciones infantiles y populares",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "",
+                "segundo_periodo": ""
+            },
+            {
+                "indicador": "Disfruta el canto",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Disfruta al acompañar una melodía con movimientos",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Coordina movimientos con palabras",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Coordina movimientos con partes del cuerpo",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Coordina movimientos con sonidos",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Identifica los colores: rojo, azul, amarillo, verde",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Identifica los colores: rosado, blanco, negro, naranja, marrón, morado, gris, crema",
+                "inicio_ano_escolar": "—",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Al garabatear, sus trazos son firmes",
+                "inicio_ano_escolar": "—",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Realiza garabateo con intención",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Utiliza colores para expresar sus ideas",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Utiliza el dibujo para comunicarse",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Dibuja objetos y situaciones con muchos elementos y colores",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Realiza pinturas libremente con sus manos, con los dedos",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Realiza pinturas utilizando pincel",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Se expresa a través de lo que pinta",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Disfruta pintar",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Dobla libremente una hoja de papel con intención de comunicar ideas y sentimientos",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Modela libremente comunicando ideas y sentimientos",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Modela objetos con altura y tridimensional comunicando ideas y sentimientos",
+                "inicio_ano_escolar": "✓",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            },
+            {
+                "indicador": "Combina diversos materiales con intención de expresar ideas y sentimientos",
+                "inicio_ano_escolar": "",
+                "primer_periodo": "✓",
+                "segundo_periodo": "✓"
+            }
+        ]
+        },
+        "primaria": {
+            "curso": "Octavo de basica",
+            "año_escolar": "2016-2017",
+            "notas": {
+                "primer_trimestre": {
+                    "lengua_española": {
+                        "codigo": "ESP-008",
+                        "cp1": 86,
+                        "cp2": 80,
+                        "cp3": 86,
+                        "cp4": 87,
+                        "pfp": 80,
+                        "cfp": 84
+                    },
+                    "matematica": {
+                        "codigo": "MAT-008",
+                        "cp1": 94,
+                        "cp2": 93,
+                        "cp3": 93,
+                        "cp4": 92,
+                        "pfp": 91,
+                        "cfp": 93
+                    },
+                    "ciencias_sociales": {
+                        "codigo": "SOC-008",
+                        "cp1": 70,
+                        "cp2": 94,
+                        "cp3": 96,
+                        "cp4": 95,
+                        "pfp": 86,
+                        "cfp": 88
+                    },
+                    "ciencias_de_la_naturaleza": {
+                        "codigo": "NAT-008",
+                        "cp1": 85,
+                        "cp2": 81,
+                        "cp3": 90,
+                        "cp4": 92,
+                        "pfp": 94,
+                        "cfp": 88
+                    },
+                    "ingles": {
+                        "codigo": "ING-008",
+                        "cp1": 89,
+                        "cp2": 78,
+                        "cp3": 85,
+                        "cp4": 87,
+                        "pfp": 90,
+                        "cfp": 86
+                    },
+                    "frances": {
+                        "codigo": "FRA-008",
+                        "cp1": 70,
+                        "cp2": 84,
+                        "cp3": 86,
+                        "cp4": 85,
+                        "pfp": 80,
+                        "cfp": 81
+                    },
+                    "educacion_artistica": {
+                        "codigo": "EDA-008",
+                        "cp1": 94,
+                        "cp2": 85,
+                        "cp3": 98,
+                        "cp4": 98,
+                        "pfp": 80,
+                        "cfp": 91
+                    },
+                    "educacion_fisica": {
+                        "codigo": "EDF-008",
+                        "cp1": 90,
+                        "cp2": 93,
+                        "cp3": 98,
+                        "cp4": 98,
+                        "pfp": 100,
+                        "cfp": 96
+                    },
+                    "formacion_humana_y_religiosa": {
+                        "codigo": "FHR-008",
+                        "cp1": 93,
+                        "cp2": 81,
+                        "cp3": 91,
+                        "cp4": 92,
+                        "pfp": 94,
+                        "cfp": 90
+                    }
+                },
+                "segundo_trimestre": {
+                    "lengua_española": {
+                        "codigo": "ESP-008",
+                        "cp1": 70,
+                        "cp2": 78,
+                        "cp3": 72,
+                        "cp4": 75,
+                        "pfp": 60,
+                        "cfp": 71,
+                        "cfa": 78
+                    },
+                    "matematica": {
+                        "codigo": "MAT-008",
+                        "cp1": 95,
+                        "cp2": 100,
+                        "cp3": 94,
+                        "cp4": 99,
+                        "pfp": 90,
+                        "cfp": 96,
+                        "cfa": 95
+                    },
+                    "ciencias_sociales": {
+                        "codigo": "SOC-008",
+                        "cp1": 97,
+                        "cp2": 90,
+                        "cp3": 82,
+                        "cp4": 85,
+                        "pfp": 65,
+                        "cfp": 84,
+                        "cfa": 86
+                    },
+                    "ciencias_de_la_naturaleza": {
+                        "codigo": "NAT-008",
+                        "cp1": 90,
+                        "cp2": 93,
+                        "cp3": 89,
+                        "cp4": 88,
+                        "pfp": 92,
+                        "cfp": 90,
+                        "cfa": 89
+                    },
+                    "ingles": {
+                        "codigo": "ING-008",
+                        "cp1": 85,
+                        "cp2": 88,
+                        "cp3": 86,
+                        "cp4": 88,
+                        "pfp": 88,
+                        "cfp": 87,
+                        "cfa": 87
+                    },
+                    "frances": {
+                        "codigo": "FRA-008",
+                        "cp1": 75,
+                        "cp2": 86,
+                        "cp3": 84,
+                        "cp4": 88,
+                        "pfp": 89,
+                        "cfp": 84,
+                        "cfa": 83
+                    },
+                    "educacion_artistica": {
+                        "codigo": "EDA-008",
+                        "cp1": 85,
+                        "cp2": 90,
+                        "cp3": 77,
+                        "cp4": 81,
+                        "pfp": 95,
+                        "cfp": 86,
+                        "cfa": 89
+                    },
+                    "educacion_fisica": {
+                        "codigo": "EDF-008",
+                        "cp1": 93,
+                        "cp2": 93,
+                        "cp3": 95,
+                        "cp4": 95,
+                        "pfp": 90,
+                        "cfp": 93,
+                        "cfa": 95
+                    },
+                    "formacion_humana_y_religiosa": {
+                        "codigo": "FHR-008",
+                        "cp1": 94,
+                        "cp2": 80,
+                        "cp3": 86,
+                        "cp4": 87,
+                        "pfp": 70,
+                        "cfp": 83,
+                        "cfa": 87
+                    }
+                },
+                "indice": {
+                    "primer_trimestre": {
+                        "cp1": 85.6,
+                        "cp2": 85.4,
+                        "cp3": 91.4,
+                        "cp4": 91.7,
+                        "pfp": 88.3,
+                        "cfp": 88.4
+                    },
+                    "segundo_trimestre": {
+                        "cp1": 87.1,
+                        "cp2": 88.6,
+                        "cp3": 85.0,
+                        "cp4": 87.3,
+                        "pfp": 82.1,
+                        "cfp": 86.1,
+                        "cfa": 86.6
+                    }
+                },
+                "leyenda": {
+                    "cp": "Calificación Parcial",
+                    "pfp": "Prueba Fin Periodo",
+                    "cfp": "Calificación Fin Periodo",
+                    "cfa": "Calificación Fin Año"
+                }
+            } 
+        },
+        "secundaria": {
+            "curso": "6to. Secundaria",
+            "año_escolar": "2020-2021",
+            "calificaciones_parciales": {
+                "lengua_española": {
+                    "ago-sept-oct": 61,
+                    "nov-dic-ene": 72,
+                    "feb-mar": 70,
+                    "abr-may-jun": 78
+                },
+                "matematica": {
+                    "ago-sept-oct": 76,
+                    "nov-dic-ene": 91,
+                    "feb-mar": 84,
+                    "abr-may-jun": 84
+                },
+                "ciencias_sociales": {
+                    "ago-sept-oct": 84,
+                    "nov-dic-ene": 93,
+                    "feb-mar": 77,
+                    "abr-may-jun": 84
+                },
+                "ciencias_de_la_naturaleza": {
+                    "ago-sept-oct": 79,
+                    "nov-dic-ene": 83,
+                    "feb-mar": 88,
+                    "abr-may-jun": 88
+                },
+                "ingles": {
+                    "ago-sept-oct": 76,
+                    "nov-dic-ene": 77,
+                    "feb-mar": 82,
+                    "abr-may-jun": 85
+                },
+                "frances": {
+                    "ago-sept-oct": 76,
+                    "nov-dic-ene": 87,
+                    "feb-mar": 87,
+                    "abr-may-jun": 88
+                },
+                "educacion_fisica": {
+                    "ago-sept-oct": 76,
+                    "nov-dic-ene": 83,
+                    "feb-mar": 63,
+                    "abr-may-jun": 91
+                },
+                "educacion_artistica": {
+                    "ago-sept-oct": 78,
+                    "nov-dic-ene": 91,
+                    "feb-mar": 84,
+                    "abr-may-jun": 96
+                },
+                "formacion_integral_humana_y_religiosa": {
+                    "ago-sept-oct": 75,
+                    "nov-dic-ene": 82,
+                    "feb-mar": 95,
+                    "abr-may-jun": 77
+                },
+                "apreciacion_y_produccion_literaria": {
+                    "ago-sept-oct": 100,
+                    "nov-dic-ene": 93,
+                    "feb-mar": 90,
+                    "abr-may-jun": 88
+                },
+                "apreciacion_de_la_literatura_anglofona": {
+                    "ago-sept-oct": 71,
+                    "nov-dic-ene": 71,
+                    "feb-mar": 71,
+                    "abr-may-jun": 71
+                }
+            },
+            "calificacion_final": {
+                "lengua_española": 70,
+                "matematica": 84,
+                "ciencias_sociales": 85,
+                "ciencias_de_la_naturaleza": 84,
+                "ingles": 80,
+                "frances": 84,
+                "educacion_fisica": 78,
+                "educacion_artistica": 87,
+                "formacion_integral_humana_y_religiosa": 82,
+                "apreciacion_y_produccion_literaria": 93,
+                "apreciacion_de_la_literatura_anglofona": 71
+            },
+            "indice": {
+                "ago-sept-oct": 77,
+                "nov-dic-ene": 84,
+                "feb-mar": 81,
+                "abr-may-jun": 84,
+                "final": 82
+            }
+        }
+    }
+]
