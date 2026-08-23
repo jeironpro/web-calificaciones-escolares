@@ -280,14 +280,57 @@ function renderSecundaria(expediente) {
 
 /* --- montaje ------------------------------------------------------------- */
 
+const NIVELES = [
+	["pre_primaria", "Pre primario"],
+	["primaria", "Primaria"],
+	["secundaria", "Secundaria"],
+];
+
+function mostrarNivel(clave) {
+	for (const [id] of NIVELES) {
+		const seccion = document.getElementById(id);
+		if (seccion) seccion.hidden = id !== clave;
+	}
+	for (const enlace of $("#pestanas").querySelectorAll("a")) {
+		const activo = enlace.getAttribute("href") === `#${clave}`;
+		if (activo) enlace.setAttribute("aria-current", "true");
+		else enlace.removeAttribute("aria-current");
+	}
+}
+
+function claveDesdeHash() {
+	const clave = location.hash.replace("#", "");
+	return NIVELES.some(([id]) => id === clave) ? clave : "pre_primaria";
+}
+
 function renderSecciones(expediente) {
 	const contenedor = $("#contenido");
-	contenedor.append(
-		renderPrePrimaria(expediente),
-		renderPrimaria(expediente),
-		renderSecundaria(expediente),
-	);
+
+	const secciones = {
+		pre_primaria: renderPrePrimaria(expediente),
+		primaria: renderPrimaria(expediente),
+		secundaria: renderSecundaria(expediente),
+	};
+
+	const pestanas = $("#pestanas");
+	for (const [clave, etiqueta] of NIVELES) {
+		secciones[clave].hidden = true;
+		contenedor.append(secciones[clave]);
+
+		const enlace = nodo(`<a href="#${clave}">${etiqueta}</a>`);
+		enlace.addEventListener("click", (evento) => {
+			evento.preventDefault();
+			history.replaceState(null, "", `#${clave}`);
+			mostrarNivel(clave);
+		});
+		pestanas.append(enlace);
+	}
+
+	window.addEventListener("hashchange", () => mostrarNivel(claveDesdeHash()));
+
+	pestanas.hidden = false;
 	contenedor.hidden = false;
+	mostrarNivel(claveDesdeHash());
 }
 
 async function iniciar() {
