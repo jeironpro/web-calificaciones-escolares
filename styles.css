@@ -1,8 +1,11 @@
 /* Hallmark · genre: modern-minimal · macrostructure: Stat-Led + pestañas (ADN together.ai) · theme: Cobalt-adjacent (papel frío · tinta navy · acento naranja señal) · enrichment: none · nav: N1b topbar · footer: Ft2 inline
- * audience: público general consultando un expediente · use: leer calificaciones por nivel · tone: SaaS limpio
+ * Convención: selectores en inglés, comentarios y textos visibles en español.
  * ADN estudiado de together.ai: hero grande → fila de 3 stats → sección con pestañas → tarjetas redondeadas */
 
+/* --- tokens del sistema de diseño ------------------------------------------ */
+
 :root {
+	/* Paleta: papel frío, tinta navy y acento naranja señal (<5 % de la vista) */
 	--color-paper:   oklch(98% 0.004 230);
 	--color-paper-2: oklch(96% 0.007 230);
 	--color-rule:    oklch(90% 0.01 230);
@@ -12,18 +15,20 @@
 	--color-accent:  #FC4C02;
 	--color-focus:   oklch(55% 0.19 45);
 
+	/* Tipografía: Geist para todo, Geist Mono como registro outlier (cifras y matrícula) */
 	--font-display: "Geist", ui-sans-serif, system-ui, sans-serif;
 	--font-body:    "Geist", ui-sans-serif, system-ui, sans-serif;
 	--font-outlier: "Geist Mono", ui-monospace, monospace;
 
+	/* Escala tipográfica (ratio 1.25 desde 16 px) */
 	--text-xs: 0.64rem;
 	--text-sm: 0.8rem;
 	--text-base: 1rem;
 	--text-md: 1.25rem;
-	--text-lg: 1.5625rem;
 	--text-xl: 1.9531rem;
 	--text-display: clamp(2.5rem, 4.5vw + 1rem, 4.25rem);
 
+	/* Medida máxima del contenido y escala de espaciado */
 	--measure: 68rem;
 	--space-2xs: 0.25rem;
 	--space-xs: 0.5rem;
@@ -31,14 +36,12 @@
 	--space-md: 1.5rem;
 	--space-lg: 2.5rem;
 	--space-xl: 4rem;
-	--space-3xl: 6rem;
 
-	--radio: 14px;
-	--radio-sm: 8px;
-	--borde: 1px solid var(--color-rule);
+	/* Radios, borde estándar y movimiento */
+	--radius: 14px;
+	--border: 1px solid var(--color-rule);
 
 	--dur-micro: 120ms;
-	--dur-short: 220ms;
 	--dur-long: 420ms;
 	--ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -94,10 +97,22 @@ code {
 	background: var(--color-paper-2);
 	padding: 0.15em 0.4em;
 	border-radius: 4px;
-	border: var(--borde);
+	border: var(--border);
 }
 
-/* --- barra superior (N1b) ------------------------------------------------ */
+/* Píldora compartida por la matrícula (barra superior) y el año (nivel educativo) */
+.chip {
+	font-family: var(--font-outlier);
+	font-size: var(--text-xs);
+	color: var(--color-muted);
+	background: var(--color-paper-2);
+	border: var(--border);
+	border-radius: 999px;
+	padding: 0.3em 0.9em;
+	white-space: nowrap;
+}
+
+/* --- barra superior --------------------------------------------------------- */
 
 .topbar {
 	max-width: var(--measure);
@@ -107,32 +122,20 @@ code {
 	justify-content: space-between;
 	gap: var(--space-sm);
 	padding-block: var(--space-md);
-	border-bottom: var(--borde);
+	border-bottom: var(--border);
 }
 
-.topbar__marca {
+.topbar__brand {
 	font-weight: 600;
 	letter-spacing: -0.02em;
 	font-size: var(--text-md);
 }
 
-.topbar__punto {
+.topbar__dot {
 	color: var(--color-accent);
 }
 
-.topbar__matricula {
-	font-family: var(--font-outlier);
-	font-size: var(--text-xs);
-	letter-spacing: 0.04em;
-	color: var(--color-muted);
-	background: var(--color-paper-2);
-	border: var(--borde);
-	border-radius: 999px;
-	padding: 0.3em 0.9em;
-	white-space: nowrap;
-}
-
-/* --- hero ----------------------------------------------------------------- */
+/* --- hero -------------------------------------------------------------------- */
 
 .hero {
 	max-width: var(--measure);
@@ -150,7 +153,7 @@ code {
 	margin: 0 0 var(--space-sm);
 }
 
-.hero__titulo {
+.hero__title {
 	font-size: var(--text-display);
 	font-weight: 600;
 	margin: 0 auto var(--space-sm);
@@ -164,7 +167,7 @@ code {
 	color: var(--color-neutral);
 }
 
-/* --- fila de stats --------------------------------------------------------- */
+/* --- fila de cifras ------------------------------------------------------------ */
 
 .stats {
 	max-width: var(--measure);
@@ -177,14 +180,14 @@ code {
 
 .stat {
 	background: var(--color-paper-2);
-	border: var(--borde);
-	border-radius: var(--radio);
+	border: var(--border);
+	border-radius: var(--radius);
 	padding: var(--space-md);
 	display: grid;
 	gap: var(--space-2xs);
 }
 
-.stat__valor {
+.stat__value {
 	font-family: var(--font-outlier);
 	font-size: var(--text-xl);
 	font-weight: 500;
@@ -192,14 +195,14 @@ code {
 	font-variant-numeric: tabular-nums;
 }
 
-.stat__etiqueta {
+.stat__label {
 	font-size: var(--text-sm);
 	color: var(--color-neutral);
 }
 
-/* --- pestañas --------------------------------------------------------------- */
+/* --- pestañas ------------------------------------------------------------------- */
 
-.pestanas {
+.tabs {
 	max-width: var(--measure);
 	margin-inline: auto;
 	display: flex;
@@ -209,92 +212,76 @@ code {
 	padding-block-end: var(--space-lg);
 }
 
-.pestanas a {
+.tabs a {
 	font-size: var(--text-sm);
 	font-weight: 500;
 	color: var(--color-muted);
 	background: var(--color-paper-2);
-	border: var(--borde);
+	border: var(--border);
 	border-radius: 999px;
 	padding: 0.5em 1.2em;
 	white-space: nowrap;
 	transition: color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out), background var(--dur-micro) var(--ease-out);
 }
 
-.pestanas a:hover {
+.tabs a:hover {
 	color: var(--color-ink);
 	border-color: var(--color-neutral);
 }
 
-.pestanas a:focus-visible {
+.tabs a:focus-visible {
 	outline: 2px solid var(--color-focus);
 	outline-offset: 2px;
 }
 
-.pestanas a[aria-current="true"] {
+.tabs a[aria-current="true"] {
 	color: var(--color-paper);
 	background: var(--color-ink);
 	border-color: var(--color-ink);
 }
 
-/* --- secciones por nivel ----------------------------------------------------- */
+/* --- secciones por nivel ----------------------------------------------------------- */
 
-.nivel {
+.level {
 	max-width: var(--measure);
 	margin-inline: auto;
 	padding-block-end: var(--space-xl);
 }
 
-.nivel__head {
+.level__header {
 	display: flex;
 	align-items: baseline;
 	gap: var(--space-sm);
 	margin-block-end: var(--space-md);
 }
 
-.nivel__titulo {
+.level__title {
 	font-size: var(--text-xl);
 	margin: 0;
 }
 
-.nivel__anio {
-	margin-inline-start: auto;
-	font-family: var(--font-outlier);
-	font-size: var(--text-xs);
-	color: var(--color-neutral);
-	background: var(--color-paper-2);
-	border: var(--borde);
-	border-radius: 999px;
-	padding: 0.3em 0.9em;
-	white-space: nowrap;
-}
-
-.nivel h3 {
+.level h3 {
 	font-size: var(--text-md);
 	margin-block: var(--space-lg) var(--space-sm);
 }
 
-.nivel p {
-	margin-block: var(--space-sm);
-}
-
-.tarjeta {
+.card {
 	background: var(--color-paper);
-	border: var(--borde);
-	border-radius: var(--radio);
+	border: var(--border);
+	border-radius: var(--radius);
 	overflow: hidden;
 	margin-block-end: var(--space-md);
 }
 
-.aviso {
+.notice {
 	max-width: var(--measure);
 	margin-inline: auto;
 	color: var(--color-muted);
 }
 
-/* --- tablas ------------------------------------------------------------------ */
+/* --- tablas --------------------------------------------------------------------------- */
 
-.tabla-scroll {
+.table-wrap {
 	overflow-x: auto;
 }
 
@@ -321,7 +308,7 @@ thead th {
 	letter-spacing: 0.07em;
 	color: var(--color-neutral);
 	background: var(--color-paper-2);
-	border-bottom: var(--borde);
+	border-bottom: var(--border);
 	white-space: nowrap;
 	padding: 0.55rem 0.75rem;
 }
@@ -330,7 +317,7 @@ th,
 td {
 	text-align: start;
 	padding: 0.55rem 0.75rem;
-	border-bottom: var(--borde);
+	border-bottom: var(--border);
 	vertical-align: top;
 }
 
@@ -348,58 +335,51 @@ th.num {
 	text-align: end;
 }
 
-tfoot td,
-tfoot th {
-	border-bottom: none;
-	border-top: 2px solid var(--color-ink);
-	font-weight: 500;
-}
-
-.marca {
+.mark {
 	color: var(--color-accent);
 	font-weight: 600;
 }
 
-.marca--vacia {
+.mark--empty {
 	color: var(--color-rule);
 }
 
-.destacada {
+.highlighted {
 	font-weight: 600;
 	color: var(--color-accent);
 }
 
-.leyenda {
+.legend {
 	font-size: var(--text-sm);
 	color: var(--color-muted);
 	padding: var(--space-sm) var(--space-md);
 	margin: 0;
-	border-top: var(--borde);
+	border-top: var(--border);
 	background: var(--color-paper-2);
-	border-radius: 0 0 var(--radio) var(--radio);
+	border-radius: 0 0 var(--radius) var(--radius);
 }
 
-.leyenda strong {
+.legend strong {
 	font-weight: 500;
 	color: var(--color-ink);
 }
 
-/* --- pie (Ft2) ----------------------------------------------------------------- */
+/* --- pie -------------------------------------------------------------------------------- */
 
-.pie {
+.footer {
 	max-width: var(--measure);
 	margin-inline: auto;
-	border-top: var(--borde);
+	border-top: var(--border);
 	padding-block: var(--space-lg) var(--space-xl);
 	font-size: var(--text-sm);
 	color: var(--color-neutral);
 }
 
-.pie p {
+.footer p {
 	margin: 0;
 }
 
-/* --- movimiento ------------------------------------------------------------------ */
+/* --- movimiento ----------------------------------------------------------------------------- */
 
 .reveal {
 	opacity: 0;
@@ -428,7 +408,7 @@ tfoot th {
 	}
 }
 
-/* --- responsive -------------------------------------------------------------------- */
+/* --- responsive -------------------------------------------------------------------------------- */
 
 @media (max-width: 40rem) {
 	.stats {
@@ -439,16 +419,12 @@ tfoot th {
 		padding-block: var(--space-lg) var(--space-md);
 	}
 
-	.nivel__head {
+	.level__header {
 		flex-wrap: wrap;
 	}
 
-	.nivel__anio {
-		margin-inline-start: 0;
-	}
-
-	/* tablas colapsadas a tarjetas: sin scroll */
-	.tabla-scroll {
+	/* Tablas colapsadas a tarjetas: cada fila se apila con etiqueta sobre valor */
+	.table-wrap {
 		overflow-x: visible;
 	}
 
@@ -478,7 +454,7 @@ tfoot th {
 		grid-template-columns: 1fr 1fr;
 		gap: 0.4rem 1rem;
 		padding: var(--space-xs) var(--space-md) var(--space-sm);
-		border-bottom: var(--borde);
+		border-bottom: var(--border);
 	}
 
 	tbody tr:last-child {
@@ -514,12 +490,12 @@ tfoot th {
 		text-align: start;
 	}
 
-	/* pestañas compactas: las tres en una fila */
-	.pestanas {
+	/* Pestañas compactas para que las tres quepan en una fila */
+	.tabs {
 		gap: var(--space-2xs);
 	}
 
-	.pestanas a {
+	.tabs a {
 		font-size: var(--text-xs);
 		padding: 0.45em 0.9em;
 	}

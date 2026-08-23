@@ -12,32 +12,36 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<!-- Barra superior con el nombre del sitio y la matrícula del estudiante -->
 	<header class="topbar reveal" style="--i: 0">
-		<span class="topbar__marca">Expediente<span class="topbar__punto">.</span></span>
-		<span class="topbar__matricula" id="matricula"></span>
+		<span class="topbar__brand">Expediente<span class="topbar__dot">.</span></span>
+		<span class="chip topbar__enrollment" id="enrollment"></span>
 	</header>
 
 	<main>
+		<!-- Encabezado principal con institución y resumen -->
 		<section class="hero reveal" style="--i: 1">
 			<p class="hero__kicker">Expediente académico</p>
-			<h1 class="hero__titulo" id="institucion">…</h1>
+			<h1 class="hero__title" id="institution">…</h1>
 			<p class="hero__lede" id="lede">Cargando expediente…</p>
 		</section>
 
+		<!-- Cifras destacadas del expediente (índice final, promedio y período) -->
 		<section class="stats reveal" style="--i: 2" aria-label="Cifras del expediente" id="stats" hidden></section>
 
 		<noscript>
-			<p class="aviso">Este expediente necesita JavaScript para leer los datos del archivo <code>qualifications.json</code>.</p>
+			<p class="notice">Este expediente necesita JavaScript para leer los datos del archivo <code>qualifications.json</code>.</p>
 		</noscript>
 
-		<nav class="pestanas reveal" style="--i: 3" aria-label="Niveles educativos" id="pestanas" hidden></nav>
+		<!-- Pestañas de niveles educativos; solo una sección visible a la vez -->
+		<nav class="tabs reveal" style="--i: 3" aria-label="Niveles educativos" id="tabs" hidden></nav>
 
-		<div id="contenido" hidden></div>
+		<div id="content" hidden></div>
 
-		<p class="aviso" id="error" hidden></p>
+		<p class="notice" id="notice-error" hidden></p>
 	</main>
 
-	<footer class="pie reveal" style="--i: 4">
+	<footer class="footer reveal" style="--i: 4">
 		<p>Expediente publicado con fines informativos.</p>
 	</footer>
 
