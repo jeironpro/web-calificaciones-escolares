@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<title>Expediente académico</title>
+	<meta name="description" content="Expediente académico: calificaciones de pre-primaria, primaria y secundaria.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="masthead reveal" style="--i: 0">
+		<p class="masthead__kicker">Expediente académico</p>
+		<h1 class="masthead__title" id="institucion">…</h1>
+		<div class="masthead__meta">
+			<span id="matricula"></span>
+			<span aria-hidden="true">·</span>
+			<span id="periodo-total"></span>
+		</div>
+	</header>
+
+	<main class="prose">
+		<section class="lede reveal" style="--i: 1" aria-label="Resumen">
+			<p id="lede">Cargando expediente…</p>
+		</section>
+
+		<noscript>
+			<p class="aviso">Este expediente necesita JavaScript para leer los datos del archivo <code>qualifications.json</code>.</p>
+		</noscript>
+
+		<div id="contenido" hidden></div>
+
+		<p class="aviso" id="error" hidden></p>
+	</main>
+
+	<footer class="colophon reveal" style="--i: 2">
+		<p>Expediente publicado con fines informativos · Los datos provienen del archivo <code>qualifications.json</code> de este repositorio.</p>
+	</footer>
+
+	<script src="app.js"></script>
+</body>
+</html>
