@@ -77,8 +77,8 @@ function fromHtml(html) {
 }
 
 async function loadRecord() {
-	const response = await fetch("qualifications.json");
-	if (!response.ok) throw new Error(`No se pudo leer qualifications.json (${response.status})`);
+	const response = await fetch("data/qualifications.json");
+	if (!response.ok) throw new Error(`No se pudo leer data/qualifications.json (${response.status})`);
 	return response.json();
 }
 
