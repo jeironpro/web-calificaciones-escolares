@@ -7,38 +7,37 @@
 	<meta name="description" content="Expediente académico: calificaciones de pre-primaria, primaria y secundaria.">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<header class="masthead reveal" style="--i: 0">
-		<p class="masthead__kicker">Expediente académico</p>
-		<h1 class="masthead__title" id="institucion">…</h1>
-		<div class="masthead__meta">
-			<span id="matricula"></span>
-			<span aria-hidden="true">·</span>
-			<span id="periodo-total"></span>
-		</div>
+	<header class="topbar reveal" style="--i: 0">
+		<span class="topbar__marca">Expediente<span class="topbar__punto">.</span></span>
+		<span class="topbar__matricula" id="matricula"></span>
 	</header>
 
-	<nav class="pestanas reveal" style="--i: 1" aria-label="Niveles educativos" id="pestanas" hidden></nav>
-
-	<main class="prose">
-		<section class="lede reveal" style="--i: 2" aria-label="Resumen">
-			<p id="lede">Cargando expediente…</p>
+	<main>
+		<section class="hero reveal" style="--i: 1">
+			<p class="hero__kicker">Expediente académico</p>
+			<h1 class="hero__titulo" id="institucion">…</h1>
+			<p class="hero__lede" id="lede">Cargando expediente…</p>
 		</section>
+
+		<section class="stats reveal" style="--i: 2" aria-label="Cifras del expediente" id="stats" hidden></section>
 
 		<noscript>
 			<p class="aviso">Este expediente necesita JavaScript para leer los datos del archivo <code>qualifications.json</code>.</p>
 		</noscript>
+
+		<nav class="pestanas reveal" style="--i: 3" aria-label="Niveles educativos" id="pestanas" hidden></nav>
 
 		<div id="contenido" hidden></div>
 
 		<p class="aviso" id="error" hidden></p>
 	</main>
 
-	<footer class="colophon reveal" style="--i: 3">
-		<p>Expediente publicado con fines informativos · Los datos provienen del archivo <code>qualifications.json</code> de este repositorio.</p>
+	<footer class="pie reveal" style="--i: 4">
+		<p>Expediente publicado con fines informativos.</p>
 	</footer>
 
 	<script src="app.js"></script>
